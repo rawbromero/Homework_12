@@ -1,4 +1,6 @@
 <script setup>
+
+
 import { onMounted, ref } from 'vue'
 import useAPI from '@/composables/useAPI'
 import { useRoute } from 'vue-router'
@@ -18,6 +20,7 @@ onMounted(() => {
 
 
 <template>
+
     <div class="">
         <!-- {{ meal }} -->
         <h1 class="text-5xl font-bold mb-10">{{ meal.strMeal }}</h1>
