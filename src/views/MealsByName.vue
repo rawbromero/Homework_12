@@ -35,7 +35,7 @@ onMounted(() => {
 
 
     </div>
-    <Meals: meals="meals"></Meals:>
+    <Meals :meals="meals"></Meals>
 
     
 </template>
