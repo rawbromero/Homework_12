@@ -28,5 +28,22 @@ const searchIngredients = computed(() => {
         <h1 class="text-4xl font-bold mb-4"> Search Meals By Ingredients</h1>
     </div>
 
-        {{ ingredients }}
+        <!-- {{ ingredients }} -->
+          <div class="p-10">
+            <input  type="text" v-model="keyword" class="rounded border-2 border-geay-200 w-full bg-white mb-5" placeholder="Enter Ingredient name"/>
+   <div class="grid grid-cols-4 gap-5">
+            <router-link 
+                v-for="ingredient in searchIngredients"
+                :key="ingredient.idIngredient" 
+                :to="{name: 'MealsByIngredients', params: {ingredient: ingredient.strIngredient}}" 
+                class="bg-white rounded p-3 mb-3 shadow block">
+                    <img :src="`http://www.themealdb.com/images/ingredients/${ingredient.strIngredient}-Small.png`"/>
+                    <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+            </router-link>
+            </div>
+
+          </div>
+
+
+         
 </template>
